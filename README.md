@@ -7,13 +7,17 @@ My environment:
 
 ## Features
 
+- [direnv](https://github.com/direnv/direnv)
 - [Oh My Zsh](https://ohmyz.sh)
 - [Pure prompt](https://github.com/sindresorhus/pure)
 - [Z](https://github.com/rupa/z/)
 
+
 ## Installation
 
+Clone the repository and run the [install.sh](./install.sh) script:
+
 ```sh
-git clone https://github.com/totakoko/dotfiles.git ~/.dotfiles
-ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
+git clone --recursive https://github.com/totakoko/dotfiles.git ~/.dotfiles
+~/.dotfiles/install.sh
 ```

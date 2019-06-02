@@ -71,6 +71,7 @@ ZSH_CUSTOM="$HOME/.dotfiles/zsh"
 plugins=(
   command-not-found
   common-aliases
+  direnv
   docker
   git
   pure
