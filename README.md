@@ -8,6 +8,7 @@ My environment:
 ## Features
 
 - [direnv](https://github.com/direnv/direnv)
+- [fnm](https://github.com/Schniz/fnm)
 - [Oh My Zsh](https://ohmyz.sh)
 - [Pure prompt](https://github.com/sindresorhus/pure)
 - [Z](https://github.com/rupa/z/)

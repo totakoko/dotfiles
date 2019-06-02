@@ -73,6 +73,7 @@ plugins=(
   common-aliases
   direnv
   docker
+  fnm
   git
   pure
   z
