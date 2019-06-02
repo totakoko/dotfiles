@@ -2,7 +2,7 @@
 
 My environment:
 - [Linux Mint Cinnamon Edition](https://linuxmint.com)
-- (Zsh](https://en.wikipedia.org/wiki/Z_shell)
+- [Zsh](https://en.wikipedia.org/wiki/Z_shell)
 
 
 ## Features
