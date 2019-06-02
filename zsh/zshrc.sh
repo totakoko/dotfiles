@@ -74,6 +74,7 @@ plugins=(
   docker
   git
   pure
+  z
 )
 
 source $ZSH/oh-my-zsh.sh

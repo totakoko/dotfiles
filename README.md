@@ -9,7 +9,7 @@ My environment:
 
 - [Oh My Zsh](https://ohmyz.sh)
 - [Pure prompt](https://github.com/sindresorhus/pure)
-
+- [Z](https://github.com/rupa/z/)
 
 ## Installation
 
