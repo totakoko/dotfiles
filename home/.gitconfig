@@ -1,0 +1,66 @@
+[user]
+  email = maxime@dreau.fr
+  name = Maxime Dréau
+[core]
+  whitespace = tab-in-indent
+  editor = vim
+  # https://stackoverflow.com/questions/28026767/where-should-i-place-my-global-gitattributes-file/28027656#28027656
+  attributesfile = ~/.gitattributes
+  autocrlf = input
+[log]
+  abbrevCommit = true
+  date = relative
+  decorate = short
+[push]
+  default = simple
+[rebase]
+  # automatically create a temporary stash before operations
+  autoStash = true
+[color]
+  ui = auto
+
+# Documents
+[diff "odt"]
+  textconv = odt2txt
+  binary = true
+[diff "doc"]
+  textconv = catdoc
+  binary = true
+[diff "docx"]
+  textconv = pandoc --to=markdown
+  binary = true
+
+# Spreadsheets
+[diff "ods"]
+  textconv = unoconv -f csv --stdout
+  binary = true
+[diff "xls"]
+  textconv = xls2csv
+  binary = true
+[diff "xlsx"]
+  textconv = xlsx2csv
+  binary = true
+
+# Presentations
+[diff "odp"]
+  textconv = odp2txt
+  binary = true
+[diff "ppt"]
+  textconv = catppt # Does not work
+  binary = true
+
+# Images
+[diff "img"]
+  textconv = exiftool
+  binary = true
+
+# Misc
+[diff "pdf"]
+  textconv = pdf2txt
+  binary = true
+
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f

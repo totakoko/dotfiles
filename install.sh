@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+
 # Install required packages
 sudo apt install -y direnv
 
@@ -16,6 +18,18 @@ rm -rf "$DOWNLOAD_DIR"
   fnm install v10
   fnm use v10
 )
+
+# Copy configuration into the home folder
+sources_home_dir="$SCRIPT_DIR"/home
+output_dir="$HOME"
+OLDIFS=$IFS
+IFS=$'\n'
+sources_files=($(find "$sources_home_dir" -type f -printf "%P\n"))
+for file_path in ${sources_files[@]}; do
+  mkdir -p "$output_dir/$(dirname "$file_path")"
+  ln -sfv "$sources_home_dir/$file_path" "$output_dir/$file_path"
+done
+IFS=$OLDIFS
 
 # Enable ZSH configuration
 ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
