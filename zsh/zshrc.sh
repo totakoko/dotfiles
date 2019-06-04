@@ -75,6 +75,7 @@ plugins=(
   docker
   fnm
   git
+  history-substring-search
   pure
   z
 )
