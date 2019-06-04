@@ -20,7 +20,7 @@ rm -rf "$DOWNLOAD_DIR"
 )
 
 # Copy configuration into the home folder
-sources_home_dir="$SCRIPT_DIR"/home
+sources_home_dir="$script_dir"/home
 output_dir="$HOME"
 OLDIFS=$IFS
 IFS=$'\n'
