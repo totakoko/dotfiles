@@ -31,5 +31,9 @@ for file_path in ${sources_files[@]}; do
 done
 IFS=$OLDIFS
 
+for script in $(ls -1 "$script_dir"/scripts); do
+  "$script_dir/scripts/$script"
+done
+
 # Enable ZSH configuration
 ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
