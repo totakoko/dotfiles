@@ -9,6 +9,7 @@ alias dcompose=docker-compose
 alias mkdir='mkdir -p'
 alias rgrep='rgrep --color=auto'
 alias free='free -h'
+alias df='df -h'
 alias o='xdg-open'
 
 alias mmv='noglob zmv -W'
