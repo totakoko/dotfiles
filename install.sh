@@ -42,3 +42,7 @@ done
 
 # Enable ZSH configuration
 ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
+
+# Change the shell
+chsh -s /bin/zsh
+
