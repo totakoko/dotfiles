@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-# Set Chromium as the default browser
-xdg-settings set default-web-browser chromium-browser.desktop
+# Set Chrome as the default browser
+xdg-settings set default-web-browser google-chrome.desktop
 
 # Disable mouse acceleration
 sudo mkdir -p /etc/X11/xorg.conf.d
@@ -57,7 +57,7 @@ dconf write /org/cinnamon/desktop/keybindings/wm/panel-run-dialog "['<Super>D']"
 dconf write /org/cinnamon/desktop/keybindings/media-keys/terminal "['<Super>Return','<Super>t']"
 dconf write /org/cinnamon/desktop/keybindings/media-keys/www "['<XF86WWW','<Super>c']"
 
-dconf write /org/cinnamon/favorite-apps "['chromium-browser.desktop', 'gnome-terminal.desktop', 'nemo.desktop']"
+dconf write /org/cinnamon/favorite-apps "['google-chrome.desktop', 'gnome-terminal.desktop', 'nemo.desktop']"
 
 # Gnome Terminal configuration
 terminalProfileId=$(dconf read /org/gnome/terminal/legacy/profiles:/default | tr -d \')
