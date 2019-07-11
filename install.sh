@@ -3,7 +3,7 @@
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # Install required packages
-sudo apt install -y direnv htop chromium-browser
+sudo apt install -y direnv htop vim zsh docker docker-compose
 
 # fnm
 DOWNLOAD_DIR="$(mktemp -d)"
