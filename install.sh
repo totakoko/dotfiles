@@ -43,6 +43,9 @@ done
 # Enable ZSH configuration
 ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
 
+# Initialize z history
+touch ~/.z
+
 # Change the shell
 chsh -s /bin/zsh
 
