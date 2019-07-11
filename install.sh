@@ -5,6 +5,11 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 # Install required packages
 sudo apt install -y direnv htop vim zsh docker docker-compose
 
+# Oh my ZSH
+if [[ ! -e ~/.oh-my-zsh ]]; then
+  git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+fi
+
 # fnm
 DOWNLOAD_DIR="$(mktemp -d)"
 wget -O "$DOWNLOAD_DIR"/fnm.zip https://github.com/Schniz/fnm/releases/download/v1.11.0/fnm-linux.zip
