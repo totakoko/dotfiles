@@ -69,5 +69,8 @@ ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
 # Initialize z history
 touch ~/.z
 
+# Allow using docker without root privileges
+sudo usermod -aG docker $USER
+
 # Change the shell
 chsh -s /bin/zsh
