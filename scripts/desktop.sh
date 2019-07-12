@@ -83,3 +83,10 @@ dconf write /org/gnome/terminal/legacy/default-show-menubar false
 # Disable Gnome help shortcut (F1)
 dconf write /org/gnome/terminal/legacy/keybindings/help "'disabled'"
 
+
+# Configure print screen to use Flameshot
+dconf write /org/cinnamon/desktop/keybindings/custom-list "['screenshot']"
+dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/screenshot/name "'Screenshot (Flameshot)'"
+dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/screenshot/command "'screenshot'"
+dconf write /org/cinnamon/desktop/keybindings/custom-keybindings/screenshot/binding "['Print']"
+

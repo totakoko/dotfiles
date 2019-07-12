@@ -3,7 +3,7 @@
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 # Install required packages
-sudo apt install -y direnv htop vim zsh docker docker-compose
+sudo apt install -y direnv htop vim zsh docker docker-compose flameshot
 
 # Oh my ZSH
 if [[ ! -e ~/.oh-my-zsh ]]; then
@@ -24,18 +24,24 @@ rm -rf "$DOWNLOAD_DIR"
   fnm use v10
 )
 
-# Copy configuration into the home folder
-sources_home_dir="$script_dir"/home
-output_dir="$HOME"
-OLDIFS=$IFS
-IFS=$'\n'
-sources_files=($(find "$sources_home_dir" -type f -printf "%P\n"))
-for file_path in ${sources_files[@]}; do
-  mkdir -p "$output_dir/$(dirname "$file_path")"
-  ln -sfv "$sources_home_dir/$file_path" "$output_dir/$file_path"
-done
-IFS=$OLDIFS
+function copy_link_tree {
+  local source_dir="$1"
+  local output_dir="$2"
+  local commands_prefix=$([[ $3 ]] && echo "sudo" || "")
+  local OLDIFS=$IFS
+  IFS=$'\n'
+  sources_files=($(find "$source_dir" -type f -printf "%P\n"))
+  for file_path in ${sources_files[@]}; do
+    $commands_prefix mkdir -p "$output_dir/$(dirname "$file_path")"
+    $commands_prefix ln -sfv "$source_dir/$file_path" "$output_dir/$file_path"
+  done
+  IFS=$OLDIFS
+}
+# Copy configuration into the user home and / folders
+copy_link_tree "$script_dir"/home "$HOME"
+copy_link_tree "$script_dir"/root "" true
 
+# Run other scripts
 for script in $(ls -1 "$script_dir"/scripts); do
   "$script_dir/scripts/$script"
 done

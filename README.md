@@ -12,6 +12,7 @@ My environment:
 - [Oh My Zsh](https://ohmyz.sh)
 - [Pure prompt](https://github.com/sindresorhus/pure)
 - [Z](https://github.com/rupa/z/)
+- Screenshots using [Flameshot](https://github.com/lupoDharkael/flameshot)
 
 
 ## Installation
