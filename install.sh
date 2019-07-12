@@ -2,13 +2,29 @@
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-# Install required packages
-sudo apt install -y direnv htop vim zsh docker docker-compose flameshot
+# Install required packages (Debian 10)
+packages=()
+
+# Script requirements
+packages+=(dconf-cli git)
+
+# Desktop
+packages+=(flameshot)
+
+# Development
+packages+=(direnv docker docker-compose vim zsh)
+
+# System
+packages+=(dconf-editor htop strace)
+
+sudo apt install -y ${packages[@]}
+
 
 # Oh my ZSH
 if [[ ! -e ~/.oh-my-zsh ]]; then
   git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
+
 
 # fnm
 DOWNLOAD_DIR="$(mktemp -d)"
@@ -23,6 +39,7 @@ rm -rf "$DOWNLOAD_DIR"
   fnm install v10
   fnm use v10
 )
+
 
 function copy_link_tree {
   local source_dir="$1"
@@ -54,4 +71,3 @@ touch ~/.z
 
 # Change the shell
 chsh -s /bin/zsh
-
