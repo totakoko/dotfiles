@@ -13,6 +13,7 @@ My environment:
 - [Pure prompt](https://github.com/sindresorhus/pure)
 - [Z](https://github.com/rupa/z/)
 - Screenshots using [Flameshot](https://github.com/lupoDharkael/flameshot)
+- [Visual Studio Code](https://code.visualstudio.com/) configuration
 
 
 ## Installation
