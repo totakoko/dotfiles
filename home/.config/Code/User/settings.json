@@ -53,4 +53,5 @@
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.startupEditor": "newUntitledFile",
+  "terminal.integrated.scrollback": 50000,
 }
