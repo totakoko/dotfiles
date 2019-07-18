@@ -74,6 +74,7 @@ plugins=(
   direnv
   docker
   fnm
+  g
   git
   history-substring-search
   pure

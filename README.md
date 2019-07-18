@@ -14,6 +14,7 @@ My environment:
 - [Z](https://github.com/rupa/z/)
 - Screenshots using [Flameshot](https://github.com/lupoDharkael/flameshot)
 - [Visual Studio Code](https://code.visualstudio.com/) configuration
+- [Go](https://golang.org) environment using [g](https://github.com/stefanmaric/g)
 
 
 ## Installation
