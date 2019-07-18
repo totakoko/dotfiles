@@ -31,7 +31,7 @@ i dbaeumer.vscode-eslint
 i ms-vscode.vscode-typescript-tslint-plugin
 
 # Sass syntax highlighting
-i robinbentley.sass-indented
+i syler.sass-indented
 
 # Vue syntax highlighting
 i octref.vetur
