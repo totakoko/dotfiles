@@ -56,5 +56,5 @@
   "terminal.integrated.scrollback": 50000,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "go.formatTool": "goimports",
-  "go.useLanguageServer": true,
+  "extensions.ignoreRecommendations": true,
 }
