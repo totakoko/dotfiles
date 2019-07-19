@@ -25,7 +25,12 @@ dconf write /org/cinnamon/workspace-osd-visible false
 # Scrolling two-finger-scrolling or edge-scrolling
 dconf write /org/cinnamon/settings-daemon/peripherals/touchpad/scroll-method "'two-finger-scrolling'"
 
+# Display the date near the clock
 dconf write /org/cinnamon/desktop/interface/clock-show-date true
+
+# First day of week = Monday
+dconf write /org/cinnamon/desktop/interface/first-day-of-week 1
+
 dconf write /org/cinnamon/desktop/wm/preferences/focus-mode "'mouse'"
 dconf write /org/cinnamon/desktop/wm/preferences/num-workspaces 6
 dconf write /org/cinnamon/desktop/wm/preferences/mouse-button-modifier "'alt'"
