@@ -15,7 +15,7 @@ packages+=(flameshot vlc)
 packages+=(direnv docker docker-compose vim zsh)
 
 # System
-packages+=(dconf-editor htop inotify-tools strace)
+packages+=(dconf-editor htop inotify-tools ntpsec strace)
 
 sudo apt install -y ${packages[@]}
 
