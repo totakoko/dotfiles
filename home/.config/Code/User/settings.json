@@ -54,4 +54,7 @@
   "workbench.colorTheme": "One Dark Pro",
   "workbench.startupEditor": "newUntitledFile",
   "terminal.integrated.scrollback": 50000,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
 }
