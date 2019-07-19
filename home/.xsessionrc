@@ -1,0 +1,2 @@
+# This file is read by the graphical display manager
+. ~/.dotfiles/zsh/plugins/g/g.plugin.zsh

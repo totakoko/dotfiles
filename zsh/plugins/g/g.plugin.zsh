@@ -1,3 +1,3 @@
 PATH=$HOME/go/bin:$PATH
-export GOPATH=${GOPATH:-$HOME/go}
-export GOROOT=${GOROOT:-$HOME/.go}
+export GOPATH=$HOME/go
+export GOROOT=$HOME/.go
