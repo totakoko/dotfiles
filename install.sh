@@ -15,7 +15,7 @@ packages+=(flameshot pavucontrol vlc)
 packages+=(direnv docker docker-compose vim zsh)
 
 # System
-packages+=(dconf-editor htop inotify-tools ntpsec strace wireshark)
+packages+=(dconf-editor htop inotify-tools ntpsec strace stress-ng wireshark)
 
 sudo apt install -y ${packages[@]}
 
