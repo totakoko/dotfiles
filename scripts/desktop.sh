@@ -15,6 +15,9 @@ Section "InputClass"
 EndSection
 EOF
 
+# French keyboard with no special characters (non-breaking space or custom slashes)
+dconf write /org/gnome/libgnomekbd/keyboard/layouts "['fr\tazerty']"
+
 dconf write /org/nemo/desktop/show-desktop-icons false
 
 dconf write /org/cinnamon/desktop-effects false
