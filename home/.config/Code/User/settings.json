@@ -28,7 +28,7 @@
   ],
   "editor.selectionHighlight": false,
   "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "alt",
+  "editor.multiCursorModifier": "ctrlCmd",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.exclude": {
