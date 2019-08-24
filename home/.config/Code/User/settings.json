@@ -1,6 +1,7 @@
 {
   "breadcrumbs.enabled": true,
   "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": true,
   "eslint.options": {
     "extensions": [".js", ".vue"]
   },
