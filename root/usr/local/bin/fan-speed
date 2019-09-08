@@ -1,0 +1,22 @@
+#!/bin/bash -e
+
+setFanSpeed () {
+  local fan1=$1
+  local fan2=$2
+  nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:0]/GPUTargetFanSpeed=$fan1"
+  nvidia-settings -a "[gpu:0]/GPUFanControlState=1" -a "[fan:1]/GPUTargetFanSpeed=$fan2"
+}
+resetFanControl () {
+  nvidia-settings -a "[gpu:0]/GPUFanControlState=0"
+}
+
+case $1 in
+"low") setFanSpeed 32 40;;
+"medium") setFanSpeed 35 45;;
+"high") setFanSpeed 40 50;;
+"custom") setFanSpeed $2 $3;;
+"default") resetFanControl;;
+*)
+  echo "Usage: fan-speed <low|medium|high>"
+  exit 1
+esac
