@@ -6,7 +6,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 packages=()
 
 # Script requirements
-packages+=(dconf-cli git)
+packages+=(dconf-cli git git-lfs)
 
 # Desktop
 packages+=(flameshot pavucontrol peek vlc)
