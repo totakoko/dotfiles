@@ -9,7 +9,7 @@ packages=()
 packages+=(dconf-cli git git-lfs)
 
 # Desktop
-packages+=(flameshot pavucontrol peek vlc)
+packages+=(blueman flameshot pavucontrol peek vlc)
 
 # Development
 packages+=(direnv docker docker-compose vim zsh)
