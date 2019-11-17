@@ -69,6 +69,9 @@ ln -sfv ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
 # Initialize z history
 touch ~/.z
 
+# Create SSH control directory
+mkdir ~/.ssh/ctl
+
 # Allow using docker without root privileges
 sudo usermod -aG docker $USER
 
