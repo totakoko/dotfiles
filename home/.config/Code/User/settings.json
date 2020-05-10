@@ -1,31 +1,19 @@
 {
   "breadcrumbs.enabled": true,
-  "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.options": {
-    "extensions": [".js", ".vue"]
+    "extensions": [
+      ".ts",
+      ".js",
+      ".vue",
+      ".html"
+    ]
   },
   "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "vue",
-      "autoFix": true
-    }
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
   ],
   "editor.selectionHighlight": false,
   "editor.minimap.enabled": false,
@@ -39,7 +27,6 @@
   "files.watcherExclude": {
     "**/vendor/**": true
   },
-  "javascript.validate.enable": false,
   "go.coverOnSingleTest": true,
   "go.lintTool": "golangci-lint",
   "go.lintFlags": [
@@ -58,4 +45,12 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "go.formatTool": "goimports",
   "extensions.ignoreRecommendations": true,
+  "window.zoomLevel": 0,
+  "terminal.integrated.confirmOnExit": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "html.autoClosingTags": false,
+  "typescript.format.semicolons": "remove",
+  "editor.suggest.showWords": false,
 }
