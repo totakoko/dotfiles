@@ -1,27 +1,3 @@
-# Totakoko's dotfiles
+# Debian System Configuration
 
-My environment:
-- [Linux Mint Cinnamon Edition](https://linuxmint.com)
-- [Zsh](https://en.wikipedia.org/wiki/Z_shell)
-
-
-## Features
-
-- [direnv](https://github.com/direnv/direnv)
-- [fnm](https://github.com/Schniz/fnm)
-- [Oh My Zsh](https://ohmyz.sh)
-- [Pure prompt](https://github.com/sindresorhus/pure)
-- [Z](https://github.com/rupa/z/)
-- Screenshots using [Flameshot](https://github.com/lupoDharkael/flameshot)
-- [Visual Studio Code](https://code.visualstudio.com/) configuration
-- [Go](https://golang.org) environment using [g](https://github.com/stefanmaric/g)
-
-
-## Installation
-
-Clone the repository and run the [install.sh](./install.sh) script:
-
-```sh
-git clone --recursive https://github.com/totakoko/dotfiles.git ~/.dotfiles
-~/.dotfiles/install.sh
-```
+WIP

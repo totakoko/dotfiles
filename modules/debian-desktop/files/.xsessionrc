@@ -1,0 +1,7 @@
+# this is read in a POSIX shell (/bin/sh) for graphical sessions
+
+if [ -n "$(ls -A $HOME/.systemrc 2>/dev/null)" ]; then
+  for script in "$HOME"/.systemrc/*.sh; do
+    . $script
+  done
+fi

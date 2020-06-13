@@ -1,0 +1,100 @@
+###### Aliases ######
+
+alias a='sudo apt'
+alias update='sudo apt update && sudo apt upgrade -y'
+
+alias t=trash
+alias dcompose=docker-compose
+
+alias mkdir='mkdir -p'
+alias rgrep='rgrep --color=auto'
+alias free='free -h'
+alias df='df -h'
+alias o='xdg-open'
+
+alias mmv='noglob zmv -W'
+alias fd='noglob fdfind'
+
+# open files in tabs
+alias vim='vim -p'
+alias svim='sudo vim -p'
+
+# Conflicts with the alias b='${(z)BROWSER}' on Ubuntu 18.04
+# backup a file
+b() {
+  mv -v $1{,.bak}
+}
+# restore a file
+r() {
+  mv -v $1 ${1%.bak}
+}
+
+# print sorted disk usage
+usage() {
+  find "${1:-.}" -maxdepth 1 -exec du -sh {} \; | sort -h
+}
+
+# grow a file by repeating its content
+grow() {
+  filename="$1"
+  if [[ -z $filename ]]; then
+    echo "Error: filename not specified"
+    return 1
+  fi
+  if [[ ! -f $filename ]]; then
+    echo "Error: $filename does not exist"
+    return 1
+  fi
+  count="$2"
+  if [[ -z $count ]]; then
+    echo "Error: count not specified"
+    return 1
+  fi
+  cpt=$count
+  touch "$filename.$count"
+  while [[ $cpt -gt 0 ]] {
+    cat "$filename" >> "$filename.$count"
+    ((cpt--))
+  }
+}
+
+
+
+##### Network #####
+
+# Ping local router
+alias pingl='ping $(ip r ls | grep default | cut -d" " -f3)'
+
+# Ping google
+alias pingg='ping www.google.fr'
+
+# Ping google dns server
+alias ping8='ping 8.8.8.8'
+
+# Ping dreau.fr
+alias pingd='ping dreau.fr'
+
+# fast ping
+alias fp='ping -i .2'
+
+alias iip='ip addr list eno1 | grep "inet " | cut -d" " -f6 | cut -d/ -f1'
+alias eip='echo $(wget -q -O- http://whatismyip.akamai.com/)'
+
+
+
+##### Git #####
+
+# go to git root
+gcd() {
+  old_rep="$(pwd)"
+
+  until [[ -d .git ]] || [[ $(pwd) = '/' ]]; do
+    cd ..
+  done
+
+  if [[ ! -d .git ]]; then
+    cd "$old_rep"
+    echo "Not in a git project !"
+    return 2
+  fi
+}
