@@ -80,6 +80,8 @@ alias fp='ping -i .2'
 alias iip='ip addr list eno1 | grep "inet " | cut -d" " -f6 | cut -d/ -f1'
 alias eip='echo $(wget -q -O- http://whatismyip.akamai.com/)'
 
+# Get request response time
+alias curltime='curl -s -o /dev/null -w "%{time_total}s\n"'
 
 
 ##### Git #####
