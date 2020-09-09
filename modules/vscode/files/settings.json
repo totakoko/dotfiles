@@ -25,6 +25,7 @@
   },
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
+    "**/dist/**": true,
     "**/vendor/**": true
   },
   "go.coverOnSingleTest": true,
