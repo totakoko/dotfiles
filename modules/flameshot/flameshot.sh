@@ -1,6 +1,6 @@
 apt_package flameshot
 
-mkdir -p ~/.config/Dharkael
+mkdir -p ~/.config/flameshot
 cp -f files/flameshot.ini ~/.config/flameshot/flameshot.ini
 cp -f files/screenshot.sh ~/bin/screenshot
 
