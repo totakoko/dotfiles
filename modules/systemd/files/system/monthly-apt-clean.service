@@ -1,0 +1,29 @@
+[Unit]
+Description=Clear APT cache
+RequiresMountsFor=/var/cache/apt,/var/lib/apt/lists/
+ConditionACPower=true
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/apt-get clean
+
+# performance options
+Nice=19
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+# hardening options
+#  details: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
+LockPersonality=true
+MemoryDenyWriteExecute=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=full
+RestrictNamespaces=true
+RestrictRealtime=true
