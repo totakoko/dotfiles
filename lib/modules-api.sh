@@ -1,9 +1,10 @@
 # these functions are exposed to the modules
 
-apt_package() {
-  echo $* >> "$SYSTEM_TMP"/apt_packages
-}
-
-apt_hook() {
-  echo "$1" >> "$SYSTEM_TMP"/apt_hooks
+require_variable() {
+  local variableName=$1
+  local prompt=$2
+  while [[ -z ${!variableName} ]]; do
+    read -e -p $prompt $variableName
+  done
+  export $variableName
 }

@@ -1,1 +1,1 @@
-export PATH="$HOME/bin:$PATH"
+export PATH="$(systemd-path user-binaries):$PATH"

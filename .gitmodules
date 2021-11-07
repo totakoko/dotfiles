@@ -1,3 +1,0 @@
-[submodule "modules/zsh/files/zsh/plugins/pure/external"]
-	path = modules/zsh/files/zsh/plugins/pure/external
-	url = https://github.com/sindresorhus/pure.git

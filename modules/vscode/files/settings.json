@@ -1,59 +1,44 @@
 {
-  "breadcrumbs.enabled": true,
-  "eslint.options": {
-    "extensions": [
-      ".ts",
-      ".js",
-      ".vue",
-      ".html"
-    ]
-  },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-  ],
-  "editor.selectionHighlight": false,
-  "editor.minimap.enabled": false,
-  "editor.multiCursorModifier": "alt",
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "files.exclude": {
-    "node_modules": true
-  },
-  "files.trimTrailingWhitespace": true,
-  "files.watcherExclude": {
-    "**/dist/**": true,
-    "**/vendor/**": true
-  },
-  "go.coverOnSingleTest": true,
-  "go.lintTool": "golangci-lint",
-  "go.lintFlags": [
-    "--fast"
-  ],
-  "languageStylus.useSeparator": false,
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "terminal.integrated.rendererType": "dom",
-  "update.mode": "none",
-  "window.menuBarVisibility": "toggle",
-  "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.scrollback": 50000,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "go.formatTool": "goimports",
-  "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 0,
-  "terminal.integrated.confirmOnExit": true,
-  "html.autoClosingTags": false,
-  "typescript.format.semicolons": "remove",
-  "editor.suggest.showWords": false,
-  "eslint.run": "onSave",
-  "editor.codeActionsOnSave": [
-    "source.fixAll.eslint"
-  ],
-  "search.searchOnType": false
+    "angular.enable-strict-mode-prompt": false,
+    "eslint.options": {
+      "extensions": [
+        ".ts",
+        ".js",
+        ".vue",
+        ".html"
+      ]
+    },
+    "eslint.run": "onSave",
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue"
+    ],
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.fontFamily": "'FiraCode Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.selectionHighlight": false,
+    "editor.suggest.showWords": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+      "**/node_modules": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "javascript.format.semicolons": "remove",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.searchOnType": false,
+    "terminal.integrated.confirmOnExit": "always",
+    "terminal.integrated.allowChords": false,
+    "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+    "vetur.useWorkspaceDependencies": true,
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.startupEditor": "newUntitledFile"
 }

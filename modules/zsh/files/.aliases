@@ -1,5 +1,6 @@
 ###### Aliases ######
 
+alias lh='ls -lh'
 alias a='sudo apt'
 alias update='sudo apt update && sudo apt upgrade -y'
 
@@ -7,17 +8,20 @@ alias t=trash
 alias dcompose=docker-compose
 
 alias mkdir='mkdir -p'
-alias rgrep='rgrep --color=auto'
+alias grep='grep -i --color=auto'
 alias free='free -h'
 alias df='df -h'
 alias o='xdg-open'
 
 alias mmv='noglob zmv -W'
-alias fd='noglob fdfind'
+alias fd='noglob fd'
 
-# open files in tabs
+# open files in tabs
 alias vim='vim -p'
 alias svim='sudo vim -p'
+
+# Human readable time format for dmesg
+alias dmesg='dmesg -H -P'
 
 # Conflicts with the alias b='${(z)BROWSER}' on Ubuntu 18.04
 # backup a file
@@ -71,17 +75,19 @@ alias pingg='ping www.google.fr'
 # Ping google dns server
 alias ping8='ping 8.8.8.8'
 
-# Ping dreau.fr
-alias pingd='ping dreau.fr'
-
 # fast ping
 alias fp='ping -i .2'
 
-alias iip='ip addr list eno1 | grep "inet " | cut -d" " -f6 | cut -d/ -f1'
-alias eip='echo $(wget -q -O- http://whatismyip.akamai.com/)'
+alias iip='hostname -I | cut -d" " -f1'
+alias eip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 
 # Get request response time
 alias curltime='curl -s -o /dev/null -w "%{time_total}s\n"'
+
+# SSH with password authentication only
+alias sshp='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
+alias ssh-copy-idp='ssh-copy-id -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 
 ##### Git #####
@@ -100,3 +106,4 @@ gcd() {
     return 2
   fi
 }
+

@@ -69,6 +69,7 @@ ZSH_CUSTOM="$HOME/.dotfiles/modules/zsh/files/zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  alias-finder
   command-not-found
   common-aliases
   direnv
@@ -77,7 +78,7 @@ plugins=(
   g
   git
   history-substring-search
-  pure
+  starship
   z
 )
 

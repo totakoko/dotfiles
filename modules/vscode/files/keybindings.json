@@ -1,5 +1,17 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
+    // fix the ctrl+e conflict with the terminal
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+
+    // ctrl+shift+d to duplicate the current line
+    {
+        "key": "ctrl+shift+d",
+        "command": "-workbench.view.debug",
+        "when": "viewContainer.workbench.view.debug.enabled"
+    },
     {
         "key": "ctrl+shift+d",
         "command": "editor.action.copyLinesDownAction",
@@ -10,23 +22,15 @@
         "command": "-editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+shift+d",
-        "command": "-workbench.view.debug"
-    },
 
-    // fix the ctrl+e conflict with the terminal
-    {
-        "key": "ctrl+e",
-        "command": "workbench.action.quickOpen",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpen"
-    },
+    // remove some terrible shortcuts
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
     }
 ]

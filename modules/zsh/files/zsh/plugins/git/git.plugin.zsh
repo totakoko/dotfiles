@@ -186,7 +186,7 @@ alias gix='git rm -r --cached'
 alias giX='git rm -rf --cached'
 
 # Log (l)
-alias gl='git log --topo-order --pretty=format:"${_git_log_medium_format}"'
+alias gl='git log --graph --pretty=format:"%C(auto)%h%d - %Cgreen%cD%Creset - %Cblue%an%Creset - %s"'
 alias gls='git log --topo-order --stat --pretty=format:"${_git_log_medium_format}"'
 alias gld='git log --topo-order --stat --patch --full-diff --pretty=format:"${_git_log_medium_format}"'
 alias glo='git log --topo-order --pretty=format:"${_git_log_oneline_format}"'
