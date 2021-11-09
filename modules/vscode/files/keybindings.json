@@ -32,5 +32,12 @@
         "key": "f5",
         "command": "-workbench.action.debug.start",
         "when": "debuggersAvailable && debugState == 'inactive'"
+    },
+
+    // ctrl+d to duplicate a file in the tree view
+    {
+        "key": "ctrl+d",
+        "command": "duplicate.execute",
+        "when": "sideBarFocus"
     }
 ]
