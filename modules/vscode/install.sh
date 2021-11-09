@@ -22,6 +22,10 @@ i syler.sass-indented
 # i golang.Go
 # Rust
 # i rust-lang.rust
+# Markdown
+i yzhang.markdown-all-in-one
+# Prisma
+i prisma.prisma
 
 #
 ## Lint / Formatting
