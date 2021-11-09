@@ -9,3 +9,5 @@ apps="$apps htop cpulimit strace"
 apps="$apps openssh-server"
 
 sudo dnf install -y $apps
+
+cp -fv "$PWD"/files/.editorconfig "$HOME"/
