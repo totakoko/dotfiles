@@ -16,6 +16,8 @@ alias o='xdg-open'
 alias mmv='noglob zmv -W'
 alias fd='noglob fd'
 
+alias da='direnv allow'
+
 # open files in tabs
 alias vim='vim -p'
 alias svim='sudo vim -p'
