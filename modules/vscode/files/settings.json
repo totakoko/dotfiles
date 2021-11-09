@@ -40,5 +40,6 @@
     "vetur.useWorkspaceDependencies": true,
     "window.titleBarStyle": "custom",
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "html.autoClosingTags": false
 }
