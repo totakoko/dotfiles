@@ -1,5 +1,7 @@
 sudo dnf install -y zsh starship direnv
 
+ln -sfv "$PWD"/files/starship.toml "$HOME"/.config/starship.toml
+
 sudo chsh -s $(which zsh) $USER
 
 if [[ ! -d "$HOME"/.oh-my-zsh ]]; then
