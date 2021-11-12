@@ -15,10 +15,10 @@ rm -rf $tempDir
 $SHELL
 ```
 
-- Copy the default *config.sh* file.
+- Copy the default configuration *config.default.sh* to *config.sh* then edit and adapt *config.sh* to your needs.
 ```sh
 cp config.default.sh config.sh
-. config.sh
+vim config.sh
 ```
 
 - Now install the modules, usually in this order:
