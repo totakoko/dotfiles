@@ -1,3 +1,2 @@
-[[ -d "$HOME/.fnm" ]] || return 0
-PATH=$HOME/.fnm:$PATH
-eval "$(fnm env --multi)"
+type fnm &>/dev/null || return 0
+eval "$(fnm env)"
