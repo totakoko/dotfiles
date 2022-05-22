@@ -84,10 +84,8 @@ set incsearch
 " Round indent to multiple of shiftwidth
 set shiftround
 
-" Ignore some directories for ctrlp
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v(dist|node_modules)',
-  \ }
+" Ignore ignored files for ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 " Let 5 lines above and below cursor
 set scrolloff=5
