@@ -18,6 +18,8 @@ alias fd='noglob fd'
 
 alias da='direnv allow'
 
+alias ns='npm start'
+
 # open files in tabs
 alias vim='vim -p'
 alias svim='sudo vim -p'
