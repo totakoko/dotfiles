@@ -80,11 +80,14 @@ dconf write /org/gnome/terminal/legacy/keybindings/help "'disabled'"
 # Set the task bar height
 dconf write /org/cinnamon/panels-height "['1:${CINNAMON_PANEL_HEIGHT:-30}']"
 
+# Since Fedora 37, fix the Super key not working
+dconf write /org/gnome/libgnomekbd/keyboard/options "['altwin\taltwin:hyper_win']"
+
 # Disable grouping windows by application
-sed -ri '/group-apps":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
+#sed -ri '/group-apps":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
 
 # Disable shortcuts with super + number to open applications (conflicts with changing workspace)
-sed -ri '/super-num-hotkeys":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
+#sed -ri '/super-num-hotkeys":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
 
 # Display the window title in the task bar
 # Options:
@@ -92,4 +95,7 @@ sed -ri '/super-num-hotkeys":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/con
 #   "Application name": 2,
 #   "Window title": 3,
 #   "Window title (only for the focused window)": 4
-sed -ri '/title-display":/,// s/(value":).*/\1 3/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
+#sed -ri '/title-display":/,// s/(value":).*/\1 3/' "$HOME"/.cinnamon/configs/grouped-window-list@cinnamon.org/2.json
+
+# Don't show recent files
+sed -ri '/show-recents":/,// s/(value":).*/\1 false/' "$HOME"/.cinnamon/configs/menu@cinnamon.org/19.json
